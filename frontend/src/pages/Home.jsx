@@ -35,14 +35,16 @@ export default function Home() {
     <main>
       {/* SHORTCUTS */}
       <div className={styles.shortcuts}>
-        {SHORTCUTS.map(({ label, Icon, bg, stroke }) => (
-          <button key={label} className={styles.shortcut}>
-            <div className={styles.shortcutIcon} style={{ background: bg }}>
-              <Icon size={22} color={stroke} />
-            </div>
-            <span>{label}</span>
-          </button>
-        ))}
+        <div className={styles.shortcutsInner}>
+          {SHORTCUTS.map(({ label, Icon, bg, stroke }) => (
+            <button key={label} className={styles.shortcut}>
+              <div className={styles.shortcutIcon} style={{ background: bg }}>
+                <Icon size={22} color={stroke} />
+              </div>
+              <span>{label}</span>
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* BANNER CAROUSEL */}
@@ -50,17 +52,19 @@ export default function Home() {
 
       {/* MAIS VENDIDOS */}
       <section className={styles.section}>
-        <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionTitle}>
-            <span className={styles.bar} />
-            Mais Vendidos
-          </h2>
-          <button className={styles.seeAll}>Ver todos ›</button>
-        </div>
-        <div className={styles.productsGrid}>
-          {PRODUTOS_DESTAQUE.map(p => (
-            <ProductCard key={p.id} produto={p} />
-          ))}
+        <div className={styles.sectionInner}>
+          <div className={styles.sectionHeader}>
+            <h2 className={styles.sectionTitle}>
+              <span className={styles.bar} />
+              Mais Vendidos
+            </h2>
+            <button className={styles.seeAll}>Ver todos ›</button>
+          </div>
+          <div className={styles.productsGrid}>
+            {PRODUTOS_DESTAQUE.map(p => (
+              <ProductCard key={p.id} produto={p} />
+            ))}
+          </div>
         </div>
       </section>
 
@@ -68,16 +72,20 @@ export default function Home() {
       <FiliaisSection />
 
       {/* SERVIÇOS */}
-      <div className={styles.servicos}>
-        {SERVICOS.map(({ Icon, titulo, sub }) => (
-          <div key={titulo} className={styles.servico}>
-            <div className={styles.servicoIcon}><Icon size={20} color="#003087" /></div>
-            <div>
-              <p className={styles.servicoT}>{titulo}</p>
-              <p className={styles.servicoS}>{sub}</p>
-            </div>
+      <div className={styles.servicosWrap}>
+        <div className={styles.servicos}>
+          <div className={styles.servicosInner}>
+            {SERVICOS.map(({ Icon, titulo, sub }) => (
+              <div key={titulo} className={styles.servico}>
+                <div className={styles.servicoIcon}><Icon size={20} color="#003087" /></div>
+                <div>
+                  <p className={styles.servicoT}>{titulo}</p>
+                  <p className={styles.servicoS}>{sub}</p>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
 
       {/* CONTATO */}

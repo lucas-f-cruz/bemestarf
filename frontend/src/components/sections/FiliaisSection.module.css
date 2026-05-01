@@ -1,4 +1,5 @@
-.section { padding: 0 20px 16px; }
+.section { padding: 0 0 16px; }
+.sectionInner { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
 .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
 .title { font-size: 16px; font-weight: 800; color: var(--blue); display: flex; align-items: center; gap: 8px; }
 .titleBar { display: block; width: 4px; height: 20px; background: var(--red); border-radius: 2px; }

@@ -5,10 +5,11 @@ import styles from './Footer.module.css'
 export default function Footer() {
   return (
     <footer className={styles.footer}>
+      <div className={styles.footerInner}>
       <div className={styles.grid}>
         {/* MARCA */}
         <div className={styles.brand}>
-          <img src="/logo.jpg" alt="Bem Estar Farma" className={styles.logo} />
+          <img src="/logo.png" alt="Bem Estar Farma" className={styles.logo} />
           <p>Sua saúde é nosso compromisso. Medicamentos, beleza e bem-estar com qualidade e preço justo para toda a família.</p>
         </div>
 
@@ -85,6 +86,7 @@ export default function Footer() {
             <span key={p} className={styles.payBadge}>{p}</span>
           ))}
         </div>
+      </div>
       </div>
     </footer>
   )

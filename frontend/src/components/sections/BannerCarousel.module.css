@@ -1,4 +1,10 @@
-.wrapper { padding: 14px 20px 4px; }
+.wrapper { padding: 14px 0 4px; }
+
+.wrapperInner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
 
 .carousel {
   border-radius: var(--radius-lg);

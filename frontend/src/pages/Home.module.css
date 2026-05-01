@@ -1,32 +1,42 @@
+/* ── SHORTCUTS ── */
 .shortcuts {
   background: white;
-  padding: 12px 20px;
+  padding: 12px 0;
+  border-bottom: 1px solid #e8e8e8;
   display: flex;
-  gap: 6px;
-  overflow-x: auto;
-  border-bottom: 1px solid var(--border);
-  scrollbar-width: none;
+  justify-content: center;
 }
-.shortcuts::-webkit-scrollbar { display: none; }
+.shortcutsInner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  width: 100%;
+}
+.shortcutsInner::-webkit-scrollbar { display: none; }
 
 .shortcut {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 5px;
-  min-width: 78px;
+  min-width: 82px;
   padding: 8px 6px;
-  border-radius: var(--radius-md);
+  border-radius: 10px;
   border: 1.5px solid transparent;
   background: none;
-  font-family: var(--font-body);
+  font-family: inherit;
   cursor: pointer;
   transition: background 0.5s ease, border-color 0.5s ease;
+  flex-shrink: 0;
 }
 .shortcut:hover { background: #e6f1fb; border-color: var(--blue); }
 
 .shortcutIcon {
-  width: 48px; height: 48px;
+  width: 50px; height: 50px;
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   transition: background 0.5s ease, transform 0.4s ease;
@@ -35,28 +45,72 @@
 .shortcut:hover .shortcutIcon svg { color: white !important; }
 
 .shortcut span {
-  font-size: 10px; color: #555; font-weight: 600; text-align: center;
+  font-size: 11px;
+  color: #555;
+  font-weight: 600;
+  text-align: center;
   transition: color 0.5s;
 }
 .shortcut:hover span { color: var(--blue); }
 
-.section { padding: 16px 20px; }
-.sectionHeader { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
-.sectionTitle { font-size: 17px; font-weight: 800; color: var(--blue); display: flex; align-items: center; gap: 8px; }
-.bar { display: block; width: 4px; height: 20px; background: var(--red); border-radius: 2px; }
-.seeAll { background: none; border: none; color: var(--blue); font-size: 13px; font-weight: 700; cursor: pointer; font-family: var(--font-body); }
+/* ── SECTION ── */
+.section { padding: 16px 0; }
+.sectionInner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.sectionTitle {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.bar {
+  display: block;
+  width: 4px; height: 22px;
+  background: var(--red);
+  border-radius: 2px;
+}
+.seeAll {
+  background: none;
+  border: none;
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+}
 .seeAll:hover { text-decoration: underline; }
 
-.productsGrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
 
+/* ── SERVIÇOS ── */
+.servicosWrap { padding: 0 0 16px; }
 .servicos {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.servicosInner {
   background: white;
-  margin: 0 20px 16px;
-  border-radius: var(--radius-lg);
+  border-radius: 12px;
   padding: 16px;
   display: flex;
   gap: 12px;
-  border: 1px solid var(--border);
+  border: 1px solid #e8e8e8;
 }
 .servico {
   flex: 1;
@@ -64,12 +118,12 @@
   align-items: center;
   gap: 12px;
   padding: 10px;
-  border-radius: var(--radius-md);
+  border-radius: 10px;
   background: #f7f9ff;
 }
 .servicoIcon {
   width: 42px; height: 42px;
-  background: var(--blue-pale);
+  background: #e6f1fb;
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
@@ -78,11 +132,11 @@
 .servicoS { font-size: 10px; color: #777; margin-top: 1px; }
 
 @media (max-width: 900px) {
+  .shortcutsInner, .sectionInner, .servicos { padding: 0 32px; }
   .productsGrid { grid-template-columns: repeat(3, 1fr); }
-  .servicos { flex-wrap: wrap; }
+  .servicosInner { flex-wrap: wrap; }
   .servico { min-width: calc(50% - 6px); }
 }
-
 @media (max-width: 600px) {
   .productsGrid { grid-template-columns: repeat(2, 1fr); }
 }

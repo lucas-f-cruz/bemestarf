@@ -34,6 +34,7 @@ export default function ContatoSection() {
 
   return (
     <section className={styles.section}>
+      <div className={styles.sectionInner}>
       {/* HEADER */}
       <div className={styles.header}>
         <div>
@@ -142,6 +143,7 @@ export default function ContatoSection() {
             ))}
           </div>
         </div>
+      </div>
       </div>
     </section>
   )
