@@ -1,0 +1,111 @@
+.section { padding: 0 20px 16px; }
+.header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.title { font-size: 16px; font-weight: 800; color: var(--blue); display: flex; align-items: center; gap: 8px; }
+.titleBar { display: block; width: 4px; height: 20px; background: var(--red); border-radius: 2px; }
+.count { font-size: 12px; color: var(--blue); font-weight: 700; }
+
+.box { background: white; border-radius: var(--radius-lg); border: 1.5px solid var(--border); overflow: hidden; }
+
+.tabs {
+  display: flex;
+  overflow-x: auto;
+  border-bottom: 2px solid var(--border);
+  background: #f8f9ff;
+  scrollbar-width: none;
+}
+.tabs::-webkit-scrollbar { display: none; }
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 11px 16px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #666;
+  white-space: nowrap;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  transition: color 0.3s, background 0.3s, border-color 0.3s;
+  font-family: var(--font-body);
+}
+.tab:hover { color: var(--blue); background: #eef2ff; }
+.tabActive { color: var(--blue); border-bottom-color: var(--red); background: white; }
+
+.tabName { opacity: 0.7; font-weight: 600; font-size: 11px; }
+.tabActive .tabName { opacity: 1; }
+
+.dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.dotOpen { background: var(--green); }
+.dotClosed { background: #999; }
+
+.panel {
+  display: flex;
+  animation: fadeInUp 0.2s ease;
+}
+
+.detail {
+  flex: 1;
+  padding: 20px 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.detailBlock {}
+.label {
+  display: block;
+  font-size: 10px;
+  font-weight: 800;
+  color: var(--red);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 6px;
+}
+.value { font-size: 13px; color: var(--text); line-height: 1.5; }
+.value strong { color: var(--blue); }
+
+.contactLink {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--blue);
+  font-weight: 600;
+  padding: 3px 0;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.contactLink:hover { opacity: 0.75; text-decoration: underline; }
+
+.horario {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #555;
+  padding: 3px 0;
+}
+.horario span { display: flex; align-items: center; gap: 4px; }
+.horario strong { color: var(--blue); }
+
+.statusOpen { color: var(--green); font-weight: 800; font-size: 13px; }
+.statusClosed { color: var(--red); font-weight: 800; font-size: 13px; }
+
+.actions { display: flex; gap: 8px; margin-top: 10px; }
+.btnWpp, .btnMap {
+  flex: 1; text-align: center; padding: 7px 10px;
+  border-radius: var(--radius-sm); font-size: 11px; font-weight: 700;
+  text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 5px;
+  transition: opacity 0.2s;
+}
+.btnWpp { background: #25d366; color: white; }
+.btnMap { background: var(--blue-pale); color: var(--blue); }
+.btnWpp:hover, .btnMap:hover { opacity: 0.85; }
+
+@media (max-width: 768px) {
+  .detail { grid-template-columns: 1fr 1fr; }
+}

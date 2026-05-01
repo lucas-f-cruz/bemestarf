@@ -1,0 +1,105 @@
+.wrapper { padding: 14px 20px 4px; }
+
+.carousel {
+  border-radius: var(--radius-lg);
+  padding: 28px 40px;
+  position: relative;
+  overflow: hidden;
+  min-height: 160px;
+  transition: background 0.6s ease;
+}
+
+.circle1 {
+  position: absolute; right: -40px; top: -40px;
+  width: 220px; height: 220px;
+  background: rgba(255,255,255,0.06); border-radius: 50%;
+  pointer-events: none;
+}
+.circle2 {
+  position: absolute; right: 80px; bottom: -60px;
+  width: 160px; height: 160px;
+  background: rgba(0,0,0,0.1); border-radius: 50%;
+  pointer-events: none;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 0.4s ease;
+}
+
+.left { max-width: 480px; }
+.tag {
+  display: inline-block;
+  background: rgba(255,255,255,0.2);
+  color: white;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+.title {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 900;
+  color: white;
+  line-height: 1.15;
+  margin-bottom: 6px;
+}
+.sub { font-size: 13px; color: rgba(255,255,255,0.8); margin-bottom: 16px; }
+.btn {
+  background: rgba(255,255,255,0.2);
+  border: 2px solid rgba(255,255,255,0.6);
+  color: white;
+  border-radius: var(--radius-md);
+  padding: 9px 22px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.btn:hover { background: rgba(255,255,255,0.35); }
+
+.badges { display: flex; gap: 10px; z-index: 2; }
+.badge {
+  background: rgba(255,255,255,0.15);
+  border: 1.5px solid rgba(255,255,255,0.35);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  text-align: center;
+  min-width: 88px;
+}
+.num { display: block; font-size: 20px; font-weight: 800; color: white; line-height: 1.2; }
+.lbl { font-size: 10px; color: rgba(255,255,255,0.8); }
+
+.arrow {
+  position: absolute;
+  top: 50%; transform: translateY(-50%);
+  background: rgba(255,255,255,0.2);
+  border: none; color: white;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 10;
+  transition: background 0.2s;
+}
+.arrow:hover { background: rgba(255,255,255,0.4); }
+.arrowLeft { left: 10px; }
+.arrowRight { right: 10px; }
+
+.dots { display: flex; justify-content: center; gap: 7px; margin-top: 10px; }
+.dot {
+  width: 8px; height: 8px;
+  border-radius: 50%; border: none;
+  background: #ccc; cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+.dotActive { background: var(--blue); transform: scale(1.3); }

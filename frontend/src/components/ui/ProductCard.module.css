@@ -1,0 +1,63 @@
+.card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 14px;
+  border: 1.5px solid var(--border);
+  cursor: pointer;
+  position: relative;
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+.card:hover {
+  border-color: var(--blue);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.badge {
+  position: absolute;
+  top: 10px; right: 10px;
+  background: var(--red);
+  color: white;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 20px;
+}
+
+.img {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: var(--radius-md);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  background: #f7f9ff;
+}
+
+.nome { font-size: 12px; color: #444; line-height: 1.4; margin-bottom: 6px; flex: 1; }
+.original { font-size: 10px; color: #aaa; text-decoration: line-through; }
+.preco { font-size: 16px; font-weight: 800; color: var(--blue); margin-top: 2px; }
+.preco span { font-size: 11px; font-weight: 400; }
+
+.addBtn {
+  width: 100%;
+  margin-top: 10px;
+  background: var(--blue);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: var(--font-body);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: background var(--transition);
+}
+.addBtn:hover { background: var(--blue-mid); }
