@@ -6,6 +6,7 @@
   display: flex;
   justify-content: center;
 }
+
 .shortcutsInner {
   max-width: 1280px;
   margin: 0 auto;
@@ -16,7 +17,10 @@
   scrollbar-width: none;
   width: 100%;
 }
-.shortcutsInner::-webkit-scrollbar { display: none; }
+
+.shortcutsInner::-webkit-scrollbar {
+  display: none;
+}
 
 .shortcut {
   display: flex;
@@ -33,16 +37,30 @@
   transition: background 0.5s ease, border-color 0.5s ease;
   flex-shrink: 0;
 }
-.shortcut:hover { background: #e6f1fb; border-color: var(--blue); }
+
+.shortcut:hover {
+  background: #e6f1fb;
+  border-color: var(--blue);
+}
 
 .shortcutIcon {
-  width: 50px; height: 50px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: background 0.5s ease, transform 0.4s ease;
 }
-.shortcut:hover .shortcutIcon { background: var(--blue) !important; transform: scale(1.1); }
-.shortcut:hover .shortcutIcon svg { color: white !important; }
+
+.shortcut:hover .shortcutIcon {
+  background: var(--blue) !important;
+  transform: scale(1.1);
+}
+
+.shortcut:hover .shortcutIcon svg {
+  color: white !important;
+}
 
 .shortcut span {
   font-size: 11px;
@@ -51,21 +69,29 @@
   text-align: center;
   transition: color 0.5s;
 }
-.shortcut:hover span { color: var(--blue); }
+
+.shortcut:hover span {
+  color: var(--blue);
+}
 
 /* ── SECTION ── */
-.section { padding: 16px 0; }
+.section {
+  padding: 16px 0;
+}
+
 .sectionInner {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 32px;
 }
+
 .sectionHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 14px;
 }
+
 .sectionTitle {
   font-size: 18px;
   font-weight: 800;
@@ -74,12 +100,15 @@
   align-items: center;
   gap: 8px;
 }
+
 .bar {
   display: block;
-  width: 4px; height: 22px;
+  width: 4px;
+  height: 22px;
   background: var(--red);
   border-radius: 2px;
 }
+
 .seeAll {
   background: none;
   border: none;
@@ -89,7 +118,10 @@
   cursor: pointer;
   font-family: inherit;
 }
-.seeAll:hover { text-decoration: underline; }
+
+.seeAll:hover {
+  text-decoration: underline;
+}
 
 .productsGrid {
   display: grid;
@@ -98,12 +130,16 @@
 }
 
 /* ── SERVIÇOS ── */
-.servicosWrap { padding: 0 0 16px; }
+.servicosWrap {
+  padding: 0 0 16px;
+}
+
 .servicos {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 32px;
 }
+
 .servicosInner {
   background: white;
   border-radius: 12px;
@@ -112,6 +148,7 @@
   gap: 12px;
   border: 1px solid #e8e8e8;
 }
+
 .servico {
   flex: 1;
   display: flex;
@@ -121,22 +158,53 @@
   border-radius: 10px;
   background: #f7f9ff;
 }
+
 .servicoIcon {
-  width: 42px; height: 42px;
+  width: 42px;
+  height: 42px;
   background: #e6f1fb;
   border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
 }
-.servicoT { font-size: 12px; font-weight: 800; color: var(--blue); }
-.servicoS { font-size: 10px; color: #777; margin-top: 1px; }
+
+.servicoT {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--blue);
+}
+
+.servicoS {
+  font-size: 10px;
+  color: #777;
+  margin-top: 1px;
+}
 
 @media (max-width: 900px) {
-  .shortcutsInner, .sectionInner, .servicos { padding: 0 32px; }
-  .productsGrid { grid-template-columns: repeat(3, 1fr); }
-  .servicosInner { flex-wrap: wrap; }
-  .servico { min-width: calc(50% - 6px); }
+
+  .shortcutsInner,
+  .sectionInner,
+  .servicos {
+    padding: 0 32px;
+  }
+
+  .productsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .servicosInner {
+    flex-wrap: wrap;
+  }
+
+  .servico {
+    min-width: calc(50% - 6px);
+  }
 }
+
 @media (max-width: 600px) {
-  .productsGrid { grid-template-columns: repeat(2, 1fr); }
+  .productsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

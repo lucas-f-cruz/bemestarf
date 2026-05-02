@@ -2,21 +2,21 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {
   FiMenu, FiGrid, FiHeart, FiSmile, FiPackage,
-  FiUsers, FiSun, FiTrendingUp, FiBook
+  FiUsers, FiSun, FiTrendingUp
 } from 'react-icons/fi'
 import { DEPARTAMENTOS } from '@/data'
 import styles from './Navbar.module.css'
 // import styles from './Navbar.module.css'
 
 const NAV_ITEMS = [
-  { label: 'Medicamentos', icon: FiGrid,       to: '/categoria/medicamentos' },
-  { label: 'Saúde',        icon: FiHeart,      to: '/categoria/saude' },
-  { label: 'Beleza',       icon: FiSmile,      to: '/categoria/beleza' },
-  { label: 'Higiene',      icon: FiPackage,    to: '/categoria/higiene' },
-  { label: 'Infantil',     icon: FiUsers,      to: '/categoria/infantil' },
-  { label: 'Serviços',     icon: FiSun,        to: '/servicos' },
-  { label: 'Ofertas',      icon: FiTrendingUp, to: '/ofertas' },
-  { label: 'Blog',         icon: FiBook,       to: '/blog' },
+  { label: 'Medicamentos', icon: FiGrid, to: '/categoria/medicamentos' },
+  { label: 'Saúde', icon: FiHeart, to: '/categoria/saude' },
+  { label: 'Beleza', icon: FiSmile, to: '/categoria/beleza' },
+  { label: 'Higiene', icon: FiPackage, to: '/categoria/higiene' },
+  { label: 'Infantil', icon: FiUsers, to: '/categoria/infantil' },
+  { label: 'Serviços', icon: FiSun, to: '/servicos' },
+  { label: 'Ofertas', icon: FiTrendingUp, to: '/ofertas' },
+  // { label: 'Blog',         icon: FiBook,       to: '/blog' },
 ]
 
 export default function Navbar() {
