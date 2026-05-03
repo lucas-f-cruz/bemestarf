@@ -110,3 +110,17 @@
 @media (max-width: 768px) {
   .detail { grid-template-columns: 1fr 1fr; }
 }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .sectionInner { padding: 0 12px; }
+  .tabs { gap: 0; }
+  .tab { padding: 10px 12px; font-size: 11px; }
+  .tabName { display: none; }
+  .detail { grid-template-columns: 1fr 1fr; gap: 12px; padding: 14px 16px; }
+}
+
+@media (max-width: 480px) {
+  .detail { grid-template-columns: 1fr; }
+  .tab { padding: 9px 10px; font-size: 10px; }
+}

@@ -1,209 +1,98 @@
 /* ── SHORTCUTS ── */
 .shortcuts {
   background: white;
-  padding: 12px 0;
+  padding: 10px 0;
   border-bottom: 1px solid #e8e8e8;
 }
-
 .shortcutsInner {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 16px;
   display: flex;
   justify-content: center;
   gap: 4px;
   overflow-x: auto;
   scrollbar-width: none;
-  width: 100%;
 }
-
-.shortcutsInner::-webkit-scrollbar {
-  display: none;
-}
+.shortcutsInner::-webkit-scrollbar { display: none; }
 
 .shortcut {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 5px;
-  min-width: 82px;
-  padding: 8px 6px;
+  min-width: 75px;
+  padding: 8px 4px;
   border-radius: 10px;
   border: 1.5px solid transparent;
   background: none;
   font-family: inherit;
   cursor: pointer;
-  transition: background 0.5s ease, border-color 0.5s ease;
+  transition: background 0.5s, border-color 0.5s;
   flex-shrink: 0;
 }
-
-.shortcut:hover {
-  background: #e6f1fb;
-  border-color: var(--blue);
-}
+.shortcut:hover { background: #e6f1fb; border-color: var(--blue); }
 
 .shortcutIcon {
-  width: 50px;
-  height: 50px;
+  width: 48px; height: 48px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.5s ease, transform 0.4s ease;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.5s, transform 0.4s;
 }
-
-.shortcut:hover .shortcutIcon {
-  background: var(--blue) !important;
-  transform: scale(1.1);
-}
-
-.shortcut:hover .shortcutIcon svg {
-  color: white !important;
-}
-
-.shortcut span {
-  font-size: 11px;
-  color: #555;
-  font-weight: 600;
-  text-align: center;
-  transition: color 0.5s;
-}
-
-.shortcut:hover span {
-  color: var(--blue);
-}
+.shortcut:hover .shortcutIcon { background: var(--blue) !important; transform: scale(1.1); }
+.shortcut:hover .shortcutIcon svg { color: white !important; }
+.shortcut span { font-size: 10px; color: #555; font-weight: 600; text-align: center; transition: color 0.5s; }
+.shortcut:hover span { color: var(--blue); }
 
 /* ── SECTION ── */
-.section {
-  padding: 16px 0;
-}
+.section { padding: 16px 0; }
+.sectionInner { max-width: 1280px; margin: 0 auto; padding: 0 16px; }
+.sectionHeader { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+.sectionTitle { font-size: 17px; font-weight: 800; color: var(--blue); display: flex; align-items: center; gap: 8px; }
+.bar { display: block; width: 4px; height: 20px; background: var(--red); border-radius: 2px; }
+.seeAll { background: none; border: none; color: var(--blue); font-size: 13px; font-weight: 700; cursor: pointer; font-family: inherit; }
+.seeAll:hover { text-decoration: underline; }
 
-.sectionInner {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 32px;
-}
-
-.sectionHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 14px;
-}
-
-.sectionTitle {
-  font-size: 18px;
-  font-weight: 800;
-  color: var(--blue);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.bar {
-  display: block;
-  width: 4px;
-  height: 22px;
-  background: var(--red);
-  border-radius: 2px;
-}
-
-.seeAll {
-  background: none;
-  border: none;
-  color: var(--blue);
-  font-size: 13px;
-  font-weight: 700;
-  cursor: pointer;
-  font-family: inherit;
-}
-
-.seeAll:hover {
-  text-decoration: underline;
-}
-
-.productsGrid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 12px;
-}
+.productsGrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
 
 /* ── SERVIÇOS ── */
-.servicosWrap {
-  padding: 0 0 16px;
-}
-
-.servicos {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 32px;
-}
-
+.servicosWrap { padding: 0 0 16px; }
+.servicos { max-width: 1280px; margin: 0 auto; padding: 0 16px; }
 .servicosInner {
-  background: white;
-  border-radius: 12px;
-  padding: 16px;
-  display: flex;
-  gap: 12px;
-  border: 1px solid #e8e8e8;
+  background: white; border-radius: 12px; padding: 16px;
+  display: flex; gap: 12px; border: 1px solid #e8e8e8; flex-wrap: wrap;
 }
-
 .servico {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px;
-  border-radius: 10px;
-  background: #f7f9ff;
+  flex: 1; min-width: 180px;
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px; border-radius: 10px; background: #f7f9ff;
+}
+.servicoIcon { width: 42px; height: 42px; background: #e6f1fb; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.servicoT { font-size: 12px; font-weight: 800; color: var(--blue); }
+.servicoS { font-size: 10px; color: #777; margin-top: 1px; }
+
+/* ── TABLET 860px ── */
+@media (max-width: 860px) {
+  .productsGrid { grid-template-columns: repeat(3, 1fr); }
+  .shortcutsInner { justify-content: flex-start; }
 }
 
-.servicoIcon {
-  width: 42px;
-  height: 42px;
-  background: #e6f1fb;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.servicoT {
-  font-size: 12px;
-  font-weight: 800;
-  color: var(--blue);
-}
-
-.servicoS {
-  font-size: 10px;
-  color: #777;
-  margin-top: 1px;
-}
-
-@media (max-width: 900px) {
-
-  .shortcutsInner,
-  .sectionInner,
-  .servicos {
-    padding: 0 32px;
-  }
-
-  .productsGrid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .servicosInner {
-    flex-wrap: wrap;
-  }
-
-  .servico {
-    min-width: calc(50% - 6px);
-  }
-}
-
+/* ── TABLET PEQUENO 600px ── */
 @media (max-width: 600px) {
-  .productsGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .shortcutsInner { padding: 0 8px; gap: 2px; }
+  .shortcut { min-width: 62px; padding: 6px 3px; }
+  .shortcutIcon { width: 40px; height: 40px; }
+  .shortcut span { font-size: 9px; }
+  .sectionInner, .servicos { padding: 0 12px; }
+  .productsGrid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .sectionTitle { font-size: 15px; }
+  .servico { min-width: calc(50% - 6px); }
+}
+
+/* ── MOBILE 400px ── */
+@media (max-width: 400px) {
+  .shortcut { min-width: 56px; }
+  .shortcutIcon { width: 36px; height: 36px; }
+  .productsGrid { grid-template-columns: repeat(2, 1fr); gap: 6px; }
+  .servico { min-width: 100%; }
 }
