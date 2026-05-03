@@ -76,6 +76,18 @@ export const FILIAIS = [
   },
   {
     id: 8,
+    nome: 'Ponta do Mato',
+    bairro: 'Ponta do Mato — RN',
+    whatsapp: '(84) 99894-0242',
+    whatsappLink: 'https://wa.me/5584998940242',
+    instagram: '@bef.umari',
+    instagramLink: 'https://instagram.com/bef.umari',
+    endereco: 'Ponta do Mato — RN',
+    horario: { semana: '8h às 20h', sabado: '8h às 20h', domingo: 'Fechado' },
+    aberto: true,
+  },
+  {
+    id: 9,
     nome: 'Umari',
     bairro: 'Umari — RN',
     whatsapp: '(84) 99879-0050',
@@ -87,7 +99,7 @@ export const FILIAIS = [
     aberto: true,
   },
   {
-    id: 9,
+    id: 10,
     nome: 'Primeira Lagoa',
     bairro: 'Primeira Lagoa — RN',
     whatsapp: '(84) 99816-0185',
@@ -97,18 +109,6 @@ export const FILIAIS = [
     endereco: 'Primeira Lagoa — RN',
     horario: { semana: '8h às 20h', sabado: '8h às 20h', domingo: 'Fechado' },
     aberto: true,
-  },
-  {
-    id: 10,
-    nome: 'Ponta do Mato',
-    bairro: 'Ponta do Mato — RN',
-    whatsapp: '(84) 99894-0242',
-    whatsappLink: 'https://wa.me/5584998940242',
-    instagram: '@bef.umari',
-    instagramLink: 'https://instagram.com/bef.umari',
-    endereco: 'Ponta do Mato — RN',
-    horario: { semana: '8h às 20h', sabado: '8h às 20h', domingo: 'Fechado' },
-    aberto: false,
   },
 ]
 

@@ -66,10 +66,9 @@ npm run build
 | 5 | Emaús/Parnamirim | (84) 98863-0897  | @befnatal       |
 | 6 | Taipu            | (84) 99158-5727  | @beftaipu       |
 | 7 | Rio do Fogo      | (84) 99134-1662  | @befriodofogo   |
-| 8 | Umari            | (84) 99879-0050  | @bef.umari      |
-| 9 | Primeira Lagoa   | (84) 99816-0185  | @bef.umari      |
-| 10| Ponta do Mato    | (84) 99894-0242  | @bef.umari      |
-
+| 8 | Ponta do Mato    | (84) 99894-0242  | @bef.umari      |
+| 9 | Umari            | (84) 99879-0050  | @bef.umari      |
+| 10| Primeira Lagoa   | (84) 99816-0185  | @bef.umari      |
 > ⚠️ Filial 3 não existe — numeração vai 1,2,4,5,6,7,8,9,10
 
 ---

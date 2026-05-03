@@ -28,7 +28,7 @@ export default function FiliaisSection() {
                 onClick={() => setActive(i)}
               >
                 <span className={`${styles.dot} ${f.aberto ? styles.dotOpen : styles.dotClosed}`} />
-                <span>Filial {f.id < 10 ? `0${f.id}` : f.id}</span>
+                <span className={styles.tabNum}>F{f.id < 10 ? `0${f.id}` : f.id}</span>
                 <span className={styles.tabName}>{f.nome}</span>
               </button>
             ))}
